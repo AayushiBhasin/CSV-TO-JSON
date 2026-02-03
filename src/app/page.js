@@ -98,7 +98,6 @@ export default function Home() {
             <div className="file-details">
               <div>
                 <p className="file-name">{file.name}</p>
-                <p className="file-size">{(file.size / 1024).toFixed(1)} KB</p>
               </div>
             </div>
             <button onClick={clearFile} className="clear-btn">✕</button>

@@ -10,34 +10,6 @@
 }
 
 
-/* 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-icon {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #2563eb;
-}
-
-.logo-icon svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: white;
-} */
-
-/* .logo span {
-  font-weight: 600;
-  color: #0f172a;
-} */
-
 .header-section {
   width: 100%;
   max-width: 42rem;
@@ -50,7 +22,7 @@
   display: inline-block;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
   background-color: rgba(37, 99, 235, 0.1);
@@ -58,8 +30,8 @@
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
   color: #0f172a;
 }
@@ -89,10 +61,10 @@
   background-color: #f1f5f9;
 }
 
-.drop-zone.dragging {
+/* .drop-zone.dragging {
   border-color: #2563eb;
   background-color: rgba(37, 99, 235, 0.03);
-}
+} */
 
 .drop-zone:hover {
   border-color: rgba(37, 99, 235, 0.5);
@@ -128,6 +100,7 @@
 .drop-title {
   font-weight: 500;
   color: #0f172a;
+  font-size: 20px;
 }
 
 .drop-subtitle {
@@ -138,11 +111,15 @@
 .browse-link {
   text-decoration: underline;
   color: #2563eb;
+  font-size: 18px;
+
 }
 
 .file-hint {
   font-size: 0.75rem;
   color: rgba(15, 23, 42, 0.4);
+  font-size: 15px;
+
 }
 
 .file-info {
@@ -225,6 +202,7 @@
   color: #0f172a;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  font-size: 16px;
 }
 
 .cancel-btn:hover {
@@ -241,6 +219,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   background-color: #2563eb;
+  font-size: 16px;
 }
 
 .upload-btn:disabled {
@@ -289,7 +268,7 @@
 
 @media (max-width: 640px) {
   .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .card {
