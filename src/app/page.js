@@ -32,7 +32,7 @@ export default function Home() {
     setStatus("idle");
 
     try {
-      const res = await fetch("http://localhost:5000/upload", {
+      const res = await fetch("https://csv-to-json-backend-duot.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
