@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CSV-to-JSON Live Transformer
 
-## Getting Started
+This project converts uploaded CSV files into structured JSON and displays the output in a web interface. The solution is divided into a frontend (Next.js) and a backend (Flask + Pandas).
 
-First, run the development server:
+---
+
+# Frontend README (Next.js)
+
+## Overall Architecture & Assumptions
+- Built using Next.js (App Router) as a client-side application
+- Responsible for file upload, API communication, and JSON rendering
+- Assumes backend API is available and returns valid JSON
+- No authentication or persistent storage is required
+
+---
+
+## JSON Structure Design Decisions
+- JSON is rendered dynamically using a recursive tree component
+- Supports nested objects and arrays
+- Expand/collapse behavior is used for better readability of large JSON
+- Designed to be generic and backend-agnostic
+
+---
+
+## Setup & Run Instructions
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Frontend runs at:
+```
+http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Backend README (Flask + Pandas)
 
-## Learn More
+## Overall Architecture & Assumptions
+- Flask-based REST API with a single upload endpoint
+- Stateless design (no database or file persistence)
+- Assumes uploaded files are CSV format with a header row
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## CSV Parsing Approach & Edge Cases
+- CSV files are parsed using Pandas
+- First row is treated as column headers
+- Each row is converted into a JSON object
+- Handles empty files, missing values, and inconsistent rows gracefully
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## JSON Structure Design Decisions
+- Output JSON is structured as a list of objects
+- Keys correspond to CSV column names
+- Format is optimized for tree-based visualization on the frontend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Setup & Run Instructions
+
+```bash
+pip install -r requirements.txt
+python app.py
+```
+
+Backend runs at:
+```
+http://localhost:5000
+```
+
