@@ -1,4 +1,4 @@
-# CSV-to-JSON Live Transformer
+# CSV-to-JSON Converter
 
 This project converts uploaded CSV files into structured JSON and displays the output in a web interface. The solution is divided into a frontend (Next.js) and a backend (Flask + Pandas).
 
