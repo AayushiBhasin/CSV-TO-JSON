@@ -1,0 +1,86 @@
+.json-tree {
+  background: #ffffff;
+  color: #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+/* Each node */
+.tree-item {
+  margin-left: 14px;
+  line-height: 1.7;
+}
+
+/* Leaf node */
+.tree-item.leaf {
+  display: flex;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+/* Clickable object key */
+.tree-key {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.tree-key:hover {
+  background: #f1f5f9;
+}
+
+/* Children indentation */
+.tree-children {
+  margin-left: 18px;
+  border-left: 1px dashed #cbd5e1;
+  padding-left: 12px;
+}
+
+/* Key styling */
+.key {
+  color: #2563eb;
+}
+
+/* Value styling */
+.value {
+  color: #059669;
+  word-break: break-word;
+}
+
+/* Colon */
+.colon {
+  color: #6b7280;
+}
+
+/* Arrow icon */
+.arrow {
+  color: #f59e0b;
+  font-size: 12px;
+}
+
+/* Object / array type */
+.type {
+  font-size: 11px;
+  color: #6b7280;
+  margin-left: 4px;
+}
+
+/* Scrollbar */
+.json-tree::-webkit-scrollbar {
+  height: 6px;
+}
+
+.json-tree::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
