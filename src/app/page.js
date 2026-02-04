@@ -103,6 +103,10 @@ export default function Home() {
             <button onClick={clearFile} className="clear-btn">✕</button>
           </div>
         )}
+        <p class="process-note">
+          ⚠️ This action may take some time to complete once started.
+        </p>
+
 
         <div className="button-group">
           <button className="cancel-btn" onClick={clearFile}>

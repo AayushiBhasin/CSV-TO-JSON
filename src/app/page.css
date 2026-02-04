@@ -1,4 +1,4 @@
-/* Design 7: Corporate Clean */
+
 .page-container {
   min-height: 100vh;
   display: flex;
@@ -61,10 +61,7 @@
   background-color: #f1f5f9;
 }
 
-/* .drop-zone.dragging {
-  border-color: #2563eb;
-  background-color: rgba(37, 99, 235, 0.03);
-} */
+
 
 .drop-zone:hover {
   border-color: rgba(37, 99, 235, 0.5);
@@ -282,4 +279,14 @@
   .button-group {
     flex-direction: column;
   }
+}
+
+.process-note {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  background-color: #fff3cd;
+  padding: 8px 12px;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
 }
